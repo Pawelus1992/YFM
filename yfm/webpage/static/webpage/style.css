@@ -1,0 +1,354 @@
+:root {
+    --custom-blue-standard: #009EE2;/* #007bff;*/
+    --custom-blue-darker: #008DD1; /*#006cee;*/
+    --custom-blue-lighter: #11AFF3; /*#118cff;*/
+}
+
+h2 {
+    color: var(--custom-blue-standard);
+    font-family: "Sansita", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.h2-right {
+    text-align: right;
+}
+
+body {
+    background-color: #fff;
+    margin: 0px;
+    font-size: 18px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    min-width: 780px;
+}
+
+header {
+    border-bottom: 2px solid black;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: calc(1vw + 1vh);
+}
+
+article#main-page {
+    min-width: 320px;
+}
+
+footer {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+#main-nav {
+    color: var(--custom-blue-standard);
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+nav {
+    font-family: "Sansita", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: calc(1.4vw + 1.4vh);
+    width: 100%;
+    min-width: 500px;
+}
+nav > ul {
+    display: inline-flex;
+    width: 100%;
+    /*gap: 5%;         odstępy między elementami */
+    justify-content: space-around;
+    padding: 0;
+    margin: 0 0 10 0px;
+    list-style: none;
+}
+nav > ul > li {
+    padding: 0px;
+    transition: color 0.3s ease;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+}
+nav > ul > li:last-child {
+    margin-right: 0px !important;
+}
+nav > ul > li:hover {
+    color: var(--custom-blue-standard);
+    cursor: pointer;
+}
+
+section {
+    margin-top: 20px;
+}
+
+#section-opinions {
+    /* Correct relative path from this file (static/webpage/style.css) to /static/images/opinie.jpg */
+    background-image: url("../images/opinie.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* or 'contain' depending on desired behavior */
+    height: 400px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* stack top and bottom blocks vertically */
+    justify-content: space-between; /* push top block to top and bottom block to bottom */
+    align-items: center; /* horizontally center content */
+}
+
+#section-opinions-top {
+    flex: 0 0 60%;
+    display: flex; /* use flex so we can vertically align the content within */
+    align-items: flex-end; /* align text to the bottom of this block */
+    justify-content: center; /* horizontal centering */
+    width: 100%;
+    padding-bottom: 6px; /* small spacing from bottom */
+}
+
+#section-opinions-author {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+.section-images {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/*
+img.img-container-big {
+    width: 39%;
+    min-width: 300px;
+    height: auto;
+    margin-left:5%;
+    margin-right:5%;
+}
+*/
+
+/* for partition of content to left & right areas (80-20 & 50-50) */
+.section-part {
+    width: flex;
+    /*min-width: 660px;*/
+    overflow: hidden;
+    /*margin-bottom: 20px;*/
+
+    /*display: inline-block; # that define the height according to it's components, to change it I need the below: */
+    display: flex;
+    align-items: center;
+}
+
+/* 80-20 */
+.section-part-img {
+    /*height: 100%;*/
+    width: 15%;
+    /*min-width: 50px;*/
+    /*display: inline-block;*/
+    display: block;
+    padding: 0 1%;
+}
+/* 80-20 */
+.section-part-text {
+    /*height: 100%;
+    width: 80%;
+    display: inline-block;*/
+
+    flex: 1;
+    padding: 0 1%;
+}
+/* 50-50 */
+.section-part-img-big {
+    /*height: 100%;*/
+    width: 50%;
+    /*min-width: 100px;*/
+    /*display: inline-block;*/
+    display: block;
+    padding: 0 1%;
+}
+/* 50-50 */
+.section-part-text-big {
+    width: 50%;
+    flex: 1;
+    padding: 0 1%;
+    min-height: 240px;
+    /*!!!!!!!!!!!!!!!!!!! width: 10%; TODO! !!!!!!!!!!!! */
+}
+
+.black-frame {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+img.img-opinions {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+img.img-container-big {
+    width: 99%;
+    height: auto;
+    margin-left:1%;
+}
+
+img.img-container-small {
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+}
+
+img.img-logo {
+    width: 250px;
+    height: auto;
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+}
+
+img.img-nav {
+    width: 5vw;
+    height: auto;
+    vertical-align: middle;
+}
+
+img.img-logo-footer {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+}
+
+.wrapped-content {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    height: 0px;
+}
+
+.unwrapped-content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    height: 100%;
+    margin-top: 20px;
+}
+
+/* Calendar styles */
+.flatpickr-day.selected,
+.flatpickr-day.selected:focus {
+    background: #28a745 !important;
+    border-color: #28a745 !important;
+    color: #fff !important;
+    border-radius: 50% !important;
+}
+
+/* Highlight a specific date (or several dates) — use onDayCreate
+.flatpickr-day.special-day {
+    background: #2ecc71;
+    border-color: #2ecc71;
+    color: white;
+    border-radius: 50%;
+}
+
+
+Make the clicked date change color and keep it (persist)
+If you want the picked day to get a custom style different from the default .selected, do this:
+CSS:
+
+.flatpickr-day.custom-selected {
+background: #00a86b;
+border-color: #00a86b;
+color: white;
+border-radius: 50%;
+}
+
+*/
+
+.button-inline-blue {
+    background-color: var(--custom-blue-standard);
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 40%;
+    margin: 10px auto;
+    cursor: pointer;
+    border: solid 1px var(--custom-blue-darker);
+    border-radius: 4px;
+}
+
+.button-blue {
+    background-color: var(--custom-blue-standard);
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+    cursor: pointer;
+    border: solid 1px var(--custom-blue-darker);
+    border-radius: 4px;
+}
+
+.button-inline-blue:hover {
+    background-color: var(--custom-blue-lighter);
+    color: #fff;
+}
+
+.button-blue:hover {
+    background-color: var(--custom-blue-lighter);
+    color: #fff;
+}
+
+.frame-google-map {
+    border:0;
+    width:100%;
+    /* Make height 60% of width using aspect-ratio */
+    aspect-ratio: 100 / 60;
+}
+
+#frame-google-form-calender {
+    border:0;
+    width:100%;
+    height:910px;
+}
+
+#frame-google-form-contact {
+    border:0;
+    width:100%;
+    height:860px;
+}
+
+#contact-form {
+    min-width: 300px;
+    padding: 10px;
+}
+
+#contact-form input {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    width: 100%;
+}
+
+#contact-form textarea{
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+}

@@ -1,0 +1,309 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Yellow Fun Marine</title>
+        <link rel="stylesheet" href="{% static 'webpage/style.css' %}">
+
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    </head>
+    <body>
+        <header>
+            <div>
+                <img class="img-logo" src="{% static 'images/logo YFM.png' %}" alt="YFM Logo"/>
+            </div>
+            <div id="main-nav">
+                <nav>
+                    <ul>
+                        <li><a onclick="scrollToDiv('about-us-content')">O NAS</a></li>
+                        <li><a onclick="scrollToDiv('our-boats')">NASZE ŁÓDKI</a></li>
+                        <li><a onclick="scrollToDiv('rent')">WYNAJEM</a></li>
+                        <li><a onclick="scrollToDiv('statute')">REGULAMIN</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61584150071956" target="_blank" rel="noopener noreferrer">
+                            <img class="img-nav" src="{% static 'images/facebook.png' %}"/><!--a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Facebook icons created by NajmunNahar - Flaticon</a--></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/yellow.funmarine/?igsh=MWNlcThsYmZzZWM0ag%3D%3D#" target="_blank" rel="noopener noreferrer">
+                            <img class="img-nav" src="{% static 'images/instagram.png' %}"/></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <article id="main-page">
+                <section id="about-us" class="main-page">
+                    <div class="section-part">
+                        <div class="section-part-img-big">
+                            <img class="img-container-big" src="{% static 'images/zdj-strona-gl1.png' %}" alt="YFM Boat1"/>
+                        </div>
+                        <div class="section-part-img-big">
+                            <img class="img-container-big" src="{% static 'images/zdj-strona-gl2.png' %}" alt="YFM Boat2"/>
+                        </div>
+                    </div>
+                    <div id="about-us-content">
+                        <h2>O NAS</h2>
+                        <p>
+                            Jesteśmy zespołem pasjonatów żeglarstwa z ponad 20-letnim doświadczeniem w tej dziedzinie. 
+                            Naszą bazą jest malowniczo położone Jezioro Przeczyckie, gdzie we współpracy
+                            z klubem żeglarskim tworzymy przestrzeń do aktywnego wypoczynku na wodzie, 
+                            zarówno dla klientów indywidualnych, jak i firm.
+                        </p>
+                        <div class="section-part">
+                            <div class="section-part-text-big">
+                                <ul><h5>Dlaczego warto nas wybrać</h5>
+                                    <li>Ponad 20 lat doświadczenia w żeglarstwie</li>
+                                    <li>Działalność przy Jeziorze Przeczyckim - jednym z piękniejszych akwenów w regionie</li>
+                                    <li>Nowoczesny, bezpieczny i zadbany sprzęt</li>
+                                    <li>Ekologiczne podejście do prowadzenia działalności</li>
+                                    <li>Indywidualne podejście do potrzeb klienta</li>
+                                </ul>
+                            </div>
+                            <div class="section-part-img-big">
+                                <img class="img-container-big" src="{% static 'images/zdj-o-nas-1.png' %}" alt="YFM Boat3"/>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="button-blue" onclick="unwrappDiv('about-us-content-hidden-info')">DOWIEDZ SIĘ WIĘCEJ</button>
+                        </div>
+                        <div id="about-us-content-hidden-info" class="black-frame wrapped-content">
+                            <p>
+                                W naszej wypożyczalni łączymy pasję do sportów wodnych z troską o środowisko.
+                                Działamy w sposób, który minimalizuje negatywny wpływ na ekosystem wodny
+                                i jego otoczenie. Sprzęt, którym dysponujemy, został starannie wybrany zgodnie
+                                z ekologicznymi standardami - jest trwały, łatwy w naprawie i w pełni nadaje się 
+                                do recyklingu. Dzięki takim działaniom każdy rejs jest bezpieczny, komfortowy
+                                i przyjazny dla przyrody.
+                            </p>
+                            <div class="section-part">
+                                <div class="section-part-text">
+                                    <ul><h5>Nasze cele obejmują</h5>
+                                        <li>Ochronę ekosystemu jeziora</li>
+                                        <li>Segregację odpadów</li>
+                                        <li>Zwiększenie świadomości ekologicznej wśród odwiedzających</li>
+                                        <li>Łagodzenie skutków zmian klimatu poprzez promocję odpowiedzialnej rekreacji i proekologicznych rozwiązań</li>
+                                    </ul>
+                                </div>
+                                <div class="section-part-img">
+                                    <img class="img-container-small" src="{% static 'images/icon-planet.png' %}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="our-boats" class="main-page">
+                    <div>
+                        <h2 class="h2-right">NASZE ŁÓDKI</h2>
+                        <h4>Jacht Antila 28.2 - Elegancja, zwrotność i komfort dla całej załogi</h4>
+                        <p>
+                            Antila 28.2 to jacht sportowo-rekreacyjny, zaprojektowany przez Michała Orycha.
+                            Charakteryzuje się wyjątkowymi osiągami nautycznymi, a przy tym przestronnym i nowoczesnym wnętrzem — doskonale sprawdzi się na żeglugę rodzinną czy z przyjaciółmi, mieści na swoim pokładzie aż do ośmiu osób.
+                        </p>
+                        <div class="section-part">
+                            <div class="section-part-img-big">
+                                <img class="img-container-big" src="{% static 'images/zdj-nasze-lodki.png' %}" alt="YFM Boat4"/>
+                            </div>
+                            <div class="section-part-text-big">
+                                <div>
+                                    <ul><h5>Co wyróżnia nasze łódki</h5>
+                                        <li>Sylwetka i pokład</li>
+                                        <li>Wygoda i wyposażenie</li>
+                                        <li>Wnętrze</li>
+                                        <li>Kuchnia i łazienka</li>
+                                        <li>Parametry techniczne</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <button class="button-blue" onclick="unwrappDiv('our-boats-hidden-info')">DOWIEDZ SIĘ WIĘCEJ</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="our-boats-hidden-info" class="wrapped-content">
+                            <div class="black-frame">
+                                <div class="section-part">
+                                    <div class="section-part-img">
+                                        <img class="img-container-small" src="{% static 'images/icon-boat.png' %}"/>
+                                    </div>
+                                    <div class="section-part-text">
+                                        <h5>Sylwetka i pokład - styl i ergonomia w jednym</h5>
+                                        <p>Dynamiczna i smukła linia kadłuba odzwierciedla sportową naturę jachtu, zaś ergonomiczny pokład z szerokimi półpokładami i niską nadbudówką zapewniają doskonałą widoczność i wygodę sterowania. Pokład i kadłub są w kolorze białym.</p>                         
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-part">
+                                <div class="section-part-img">
+                                    <img class="img-container-small" src="{% static 'images/icon-heart.png' %}"/>
+                                </div>
+                                <div class="section-part-text">
+                                    <h5>Wygoda i wyposażenie - wszystko, czego potrzeba</h5>
+                                    <ul>
+                                        Jednostkę wyposażono w rozwiązania podnoszące komfort żeglugi:
+                                        <li>Kabestany fałowe 12ST 2szt, kabestany szotowe 12ST 2szt</li>
+                                        <li>Ster strumieniowy ułatwiający manewry portowe</li>
+                                        <li>Przestronny kokpit z solidnym osprzętem i stolikiem - idealne miejsce na wspólne chwile na wodzie</li>
+                                        <li>Urządzenie sterowe: jarzmo z rumplem ze stali A2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="black-frame section-part">
+                                <div class="section-part-img">
+                                    <img class="img-container-small" src="{% static 'images/icon-comfort.png' %}"/>
+                                </div>
+                                <div class="section-part-text">
+                                    <h5>Wnętrze - komfort podczas żeglugi</h5>
+                                    <p>Antila 28.2 oferuje trzy zamykane kabiny dwuosobowe. W mesie dostępne są dodatkowe dwie rozkładane koje, które umożliwiają nocleg dla ośmiu osób. Wysokość wnętrza wynosi 1,86 m, co gwarantuje swobodę poruszania się i wygodę użytkowania.</p>
+                                </div>
+                            </div>
+                            <div class="section-part">
+                                <div id="shower-img" class="section-part-img">
+                                    <img class="img-container-small" src="{% static 'images/icon-shower.png' %}"/>
+                                </div>
+                                <div class="section-part-text">
+                                    <h5>Kuchnia i łazienka - komfort i funkcjonalność</h5>
+                                    <p>W kambuzie znajdziesz kuchenkę gazową z dwoma palnikami, instalację wody pitnej, zlewozmywak, toaletę morską z obiegiem za burtowym oraz lodówkę 40l. Mesa i kajuty doświetlają otwierane okienka i oświetlenie wewnętrzne, zapewniając przyjazną atmosferę.</p>
+                                </div>
+                            </div>
+                            <div class="black-frame section-part">
+                                <div class="section-part-img">
+                                    <img class="img-container-small" src="{% static 'images/icon-tools.png' %}"/>
+                                </div>
+                                <div class="section-part-text">
+                                    <ul><h5>Parametry techniczne</h5>
+                                        <li>Długość całkowita: 8,85 m</li>
+                                        <li>Długość kadłuba: 8,28 m</li>
+                                        <li>Szerokość kadłuba: 3,07 m</li>
+                                        <li>Zanurzenie bez miecza / z mieczem: 0,43 m / 1,75 m</li>
+                                        <li>Max. wysokość w kabinie: 1,86 m</li>
+                                        <li>Powierzchnia żagli / Grot / Fok39 m2</li>
+                                        <li>Masa transportowa: do 4 000 kg</li>
+                                        <li>Balast denny: 1 000 kg</li>
+                                        <li>Masa miecza uchylnego: 100 kg</li>
+                                        <li>Wysokość masztu nad pokładem: 11 m</li>
+                                        <li>Wysokość boczna łodzi nad wodą: 12,6 m</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="rent" class="main-page">
+                    <h2>WYNAJEM</h2>
+                    <div class="section-part">
+                        <div class="section-part-text-big">   
+                            <p>Rezerwacja jest szybka i wygodna - wystarczy skontaktować się z nami mailowo, a dobierzemy dla Ciebie odpowiednią łódkę oraz ustalimy dogodny termin.</p>
+                            <ul><h5>Nasz sprzęt</h5>
+                                <li>Antila 28.2 - Żółte Drzwi</li>
+                                <li>Antila 28.2 - Katowice nie Lizbona</li>
+                            </ul>
+                            <button class="button-blue" onclick="scrollToDiv('contact')">KONTAKT</button>
+                            <p>Czas wyruszyć na wodę i cieszyć się każdą chwilą.
+                                <span onclick="unwrappDiv('rent-hidden-info')" style="color: var(--custom-blue-standard); font-weight: bold; cursor: pointer;">ZAREZERWUJ JUŻ TERAZ!</span>
+                            </p>
+                            <!--button class="button-blue" onclick="unwrappDiv('rent-hidden-info')">ZAREZERWUJ JUŻ TERAZ!</button-->
+                        </div>
+                        <div class="section-part-img-big">
+                            <img class="img-container-big" src="{% static 'images/zdj-wynajem.png' %}" alt="YFM Boat5"/>
+                        </div>
+                    </div>
+                    <div id="rent-hidden-info" class="wrapped-content">                       
+                        <!-- Load Google Form in iframe -->
+                        <iframe 
+                            src="https://forms.gle/bnMFDJbYGQCLGm4x9"
+                            width="100%"
+                            height="900"
+                            frameborder="0">
+                        </iframe>
+                        <div class="section-part">
+                            <div class="section-part-img-big">
+                                <img class="img-container-small" src="{% static 'images/blik.png' %}" alt="blik"/>
+                            </div>
+                            <div class="section-part-img-big">
+                                <img class="img-container-small" src="{% static 'images/przelewy24.png' %}" alt="przelewy24"/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="statute" class="main-page">
+                    <h2 class="h2-right">REGULAMIN</h2>
+                    <div class="section-part">
+                        <div class="section-part-img-big">
+                            <img class="img-container-big" src="{% static 'images/zdj-regulamin.png' %}" alt="YFM Boat6"/>
+                        </div>
+                        <div class="section-part-text-big">
+                            <p>Regulamin określa warunki wynajmu naszych łódek. Jego celem jest wygoda i bezpieczeństwo korzystania z usług oraz przedstawienie praw i obowiązków Wynajmującego i Najemcy. Korzystając z oferty, Najemca potwierdza zapoznanie z jego treścią, akceptuje jego postanowienia i zobowiązuje się do ich przestrzegania.</p>
+                            <a href="{% static 'pdfs/RegulaminYFM.pdf' %}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                <button class="button-blue">REGULAMIN</button>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section id="opinions" class="main-page">
+                    <h2>OPINIE</h2>
+                    <div id="section-opinions">
+                        <div id="section-opinions-top">
+                            <h3>W tym miejscu pojawią się opinie.</h2>
+                        </div>
+                        <div id="section-opinions-author">
+                            <p>...</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="contact" class="main-page">
+                    <h2 class="h2-right">SKONTAKTUJ SIĘ Z NAMI</h2>
+                    <div class="section-part">  
+                        <div id="contact-form">
+                            <form id="contact" action="{% url 'contact' %}" method="post">
+                                {% csrf_token %}
+                                <div><input type="text" id="imie" name="imie" required placeholder="Imię"></div>
+                                <div><input type="email" id="email" name="email" required placeholder="Email"></div>
+                                <div><textarea id="wiadomosc" name="wiadomosc" rows="10" required placeholder="Wiadomość"></textarea></div>
+                                <div style="display: flex;">
+                                    <button class="button-inline-blue" type="submit">Wyślij</button>
+                                    <button class="button-inline-blue" type="reset">Resetuj</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="section-part-text-big">
+                            <iframe class="frame-google-map" 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d898.1538377796462!2d19.174479408088523!3d50.45297075941141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4717284cbe217cd9%3A0xb41765d7d966639e!2sParkowa%201%2C%2042-460%20Boguchwa%C5%82owice!5e0!3m2!1spl!2spl!4v1764576695102!5m2!1spl!2spl" 
+                                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <img class="img-logo-footer" src="{% static 'images/footer.png' %}" alt="Footer"/>
+        </footer>
+
+        <script> // scroll
+            function scrollToDiv(divId) {
+                const element = document.getElementById(divId);
+                if (!element) {
+                    console.warn(`Element o ID "${divId}" nie został znaleziony.`);
+                    return;
+                }
+                // Blur any focused iframe to prevent autofocus errors
+                const focusedElement = document.activeElement;
+                if (focusedElement && focusedElement.tagName === 'IFRAME') {
+                    focusedElement.blur();
+                }
+                element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        </script>
+
+        <script> //unwrapp div
+            function unwrappDiv(divId) {
+                const el = document.getElementById(divId);
+                if (el) {
+                    el.classList.add("unwrapped-content");
+                    el.classList.remove("wrapped-content");
+                }
+            }
+        </script>
+    </body>
+</html>

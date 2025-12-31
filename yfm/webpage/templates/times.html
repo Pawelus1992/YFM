@@ -1,0 +1,15 @@
+<h2>Dostępne godziny: {{ day }}</h2>
+
+{% if times %}
+    <ul>
+    {% for t in times %}
+        <li>
+            <a href="/book/{{ t.id }}/">
+                {{ t.time }}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Brak dostępnych godzin.</p>
+{% endif %}
