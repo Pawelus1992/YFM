@@ -17,8 +17,6 @@ class Opinion(models.Model):
     def __str__(self):
         return self.text
 
-
-
 class TimeSlot(models.Model):
     date = models.DateField()
     time = models.TimeField()

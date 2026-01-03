@@ -1,7 +1,7 @@
 :root {
-    --custom-blue-standard: #009EE2;/* #007bff;*/
-    --custom-blue-darker: #008DD1; /*#006cee;*/
-    --custom-blue-lighter: #11AFF3; /*#118cff;*/
+    --custom-blue-standard: #009EE2;
+    --custom-blue-darker: #008DD1;
+    --custom-blue-lighter: #11AFF3;
 }
 
 h2 {
@@ -67,7 +67,6 @@ nav {
 nav > ul {
     display: inline-flex;
     width: 100%;
-    /*gap: 5%;         odstępy między elementami */
     justify-content: space-around;
     padding: 0;
     margin: 0 0 10 0px;
@@ -93,27 +92,26 @@ section {
 }
 
 #section-opinions {
-    /* Correct relative path from this file (static/webpage/style.css) to /static/images/opinie.jpg */
     background-image: url("../images/opinie.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover; /* or 'contain' depending on desired behavior */
+    background-size: cover;
     height: 400px;
     width: 100%;
     text-align: center;
     display: flex;
-    flex-direction: column; /* stack top and bottom blocks vertically */
-    justify-content: space-between; /* push top block to top and bottom block to bottom */
-    align-items: center; /* horizontally center content */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #section-opinions-top {
     flex: 0 0 60%;
-    display: flex; /* use flex so we can vertically align the content within */
-    align-items: flex-end; /* align text to the bottom of this block */
-    justify-content: center; /* horizontal centering */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     width: 100%;
-    padding-bottom: 6px; /* small spacing from bottom */
+    padding-bottom: 6px;
 }
 
 #section-opinions-author {
@@ -131,62 +129,35 @@ section {
     display: inline-block;
 }
 
-/*
-img.img-container-big {
-    width: 39%;
-    min-width: 300px;
-    height: auto;
-    margin-left:5%;
-    margin-right:5%;
-}
-*/
-
-/* for partition of content to left & right areas (80-20 & 50-50) */
 .section-part {
     width: flex;
-    /*min-width: 660px;*/
     overflow: hidden;
-    /*margin-bottom: 20px;*/
-
-    /*display: inline-block; # that define the height according to it's components, to change it I need the below: */
     display: flex;
     align-items: center;
 }
 
-/* 80-20 */
 .section-part-img {
-    /*height: 100%;*/
     width: 15%;
-    /*min-width: 50px;*/
-    /*display: inline-block;*/
     display: block;
     padding: 0 1%;
 }
-/* 80-20 */
-.section-part-text {
-    /*height: 100%;
-    width: 80%;
-    display: inline-block;*/
 
+.section-part-text {
     flex: 1;
     padding: 0 1%;
 }
-/* 50-50 */
+
 .section-part-img-big {
-    /*height: 100%;*/
     width: 50%;
-    /*min-width: 100px;*/
-    /*display: inline-block;*/
     display: block;
     padding: 0 1%;
 }
-/* 50-50 */
+
 .section-part-text-big {
     width: 50%;
     flex: 1;
     padding: 0 1%;
     min-height: 240px;
-    /*!!!!!!!!!!!!!!!!!!! width: 10%; TODO! !!!!!!!!!!!! */
 }
 
 .black-frame {
@@ -248,7 +219,6 @@ img.img-logo-footer {
     margin-top: 20px;
 }
 
-/* Calendar styles */
 .flatpickr-day.selected,
 .flatpickr-day.selected:focus {
     background: #28a745 !important;
@@ -256,28 +226,6 @@ img.img-logo-footer {
     color: #fff !important;
     border-radius: 50% !important;
 }
-
-/* Highlight a specific date (or several dates) — use onDayCreate
-.flatpickr-day.special-day {
-    background: #2ecc71;
-    border-color: #2ecc71;
-    color: white;
-    border-radius: 50%;
-}
-
-
-Make the clicked date change color and keep it (persist)
-If you want the picked day to get a custom style different from the default .selected, do this:
-CSS:
-
-.flatpickr-day.custom-selected {
-background: #00a86b;
-border-color: #00a86b;
-color: white;
-border-radius: 50%;
-}
-
-*/
 
 .button-inline-blue {
     background-color: var(--custom-blue-standard);
@@ -319,7 +267,6 @@ border-radius: 50%;
 .frame-google-map {
     border:0;
     width:100%;
-    /* Make height 60% of width using aspect-ratio */
     aspect-ratio: 100 / 60;
 }
 

@@ -12,9 +12,6 @@ class HomeListView(ListView):
     model = PageSection
     template_name = 'webpage/base.html'
 
-
-
-
 def calendar_view(request):
     return render(request, "calendar.html")
 
@@ -44,11 +41,11 @@ def contact_view(request):
         email = request.POST.get('email')
         message = request.POST.get('wiadomosc') or request.POST.get('message') or ''
 
-        subject = f'Kontakt ze strony: {name}'
+        subject = f'Kontakt ze strony YFM od: {name}'
         body = message + "\n\n" + f'Od: {name} <{email}>'
 
         from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'pawel.sierz@gmail.com')
-        recipient = [email] #[getattr(settings, 'CONTACT_EMAIL', from_email)]
+        recipient = [email]
 
         send_error = None
         try:
@@ -62,7 +59,7 @@ def contact_view(request):
         email = request.POST.get('email')
         message = request.POST.get('wiadomosc') or request.POST.get('message') or ''
 
-        subject = f'Kontakt ze strony: {name}'
+        subject = f'Kontakt ze strony YFM od: {name}'
         body = message + "\n\n" + f'Od: {name} <{email}>'
 
         from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', 'pawel.sierz@gmail.com')
@@ -71,36 +68,6 @@ def contact_view(request):
         try:
             send_mail(subject, body, from_email, recipient, fail_silently=False)
         except Exception:
-            # ignore send errors here; user requested always redirect to main
             pass
 
-    # Always redirect user to the main page regardless of POST result
     return redirect('base')
-
-@require_POST
-@csrf_protect
-def booking(request):
-    """Obsługuje przesłanie formularza rezerwacji"""
-    try:
-        # Pobierz dane z formularza
-        data_od = request.POST.get('data_od')
-        data_do = request.POST.get('data_do')
-        godzina_od = request.POST.get('godzina_od')
-        godzina_do = request.POST.get('godzina_do')
-        imie_naz = request.POST.get('imie_naz')
-        spos_kontaktu = request.POST.get('spos_kontaktu')
-        
-        # Tu możesz dodać logikę zapisania do bazy danych
-        # na przykład: Booking.objects.create(...)
-        
-        print(f"Rezerwacja: {imie_naz}, {data_od} - {data_do}, {godzina_od} - {godzina_do}")
-        print(f"Kontakt: {spos_kontaktu}")
-        
-        # Wyślij wiadomość e-mail lub zapisz do DB
-        
-        # Przekieruj na stronę główną lub pokaż komunikat sukcesu
-        return redirect('index')  # zmień na swoją główną stronę
-        
-    except Exception as e:
-        print(f"Błąd: {e}")
-        return redirect('index')
