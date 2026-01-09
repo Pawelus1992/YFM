@@ -69,6 +69,10 @@ footer {
     margin-top: 20px;
 }
 
+footer div, footer p {
+    margin: 0px !important;
+}
+
 #main-nav {
     color: var(--custom-blue-standard);
     display: flex;
@@ -333,4 +337,12 @@ img.img-logo-footer {
     display: block;
     margin-top: 10px;
     width: 100%;
+}
+
+#kpo-hidden-info {
+    display: none;
+}
+
+#kpo-hidden-info.unwrapped-content {
+    display: block;
 }

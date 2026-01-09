@@ -267,7 +267,7 @@
                         </div>
                         <div class="section-part-text-big">
                             <iframe class="frame-google-map" 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d898.1538377796462!2d19.174479408088523!3d50.45297075941141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4717284cbe217cd9%3A0xb41765d7d966639e!2sParkowa%201%2C%2042-460%20Boguchwa%C5%82owice!5e0!3m2!1spl!2spl!4v1764576695102!5m2!1spl!2spl" 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5080.857924928452!2d19.182862076898072!3d50.45173629118941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471729487d948cb1%3A0x647766f583fcf729!2zUHJ6eXN0YcWEIEtsdWIgxbtlZ2xhcnNraSBaYWfFgsSZYmll!5e0!3m2!1spl!2spl!4v1767794953671!5m2!1spl!2spl"
                                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                         </div>
@@ -277,6 +277,23 @@
         </main>
         <footer>
             <img class="img-logo-footer" src="{% static 'images/footer.png' %}" alt="Footer"/>
+            <div id="footer-content">
+                <p>Żółte Drzwi sp. z o.o. realizuje projekt dofinansowany z&nbsp;Krajowego Planu Odbudowy i&nbsp;Zwiększania Odporności&nbsp;(KPO)&nbsp;w&nbsp;ramach działania&nbsp;A1.2.1
+                   "Inwestycje dla przedsiębiorstw&nbsp;w&nbsp;produkty, usługi&nbsp;i&nbsp;kompetencje pracowników oraz kadry związane&nbsp;z&nbsp;dywersyfikacją działalności".
+                </p>
+                <div id="read-more-info" class="unwrapped-content">
+                    <span onclick="unwrappDiv('kpo-hidden-info'); wrappDiv('read-more-info');"
+                          style="text-decoration: underline; cursor: pointer;">Przeczytaj więcej...
+                    </span>
+                </div>
+                <div id="kpo-hidden-info" class="wrapped-content">
+                    <p>Tytuł projektu: "Dywersyfikacja działalności w&nbsp;celu zwiększenia odporności na kryzys Spółki Żółte Drzwi&nbsp;sp. z&nbsp;o.o. poprzez&nbsp;uruchomienie Wypożyczalni Sprzętu Wodnego 'Yellow FunMarine', poprzez realizację Przedsięwzięcia MŚP na Śląsku (region 4)"
+                        <br/>Cel projektu: Zwiększenie odporności przedsiębiorstwa na sytuacje kryzysowe poprzez dywersyfikację działalności&nbsp;i&nbsp;wejście na nowe rynki dzięki uruchomieniu wypożyczalni sprzętu wodnego nad jeziorem Przeczyckim. 
+                        <br/>Wartość dofinansowania: 493&nbsp;000,00&nbsp;zł
+                        <br/>Projekt współfinansowany ze środków Unii Europejskiej w&nbsp;ramach Krajowego Planu Odbudowy&nbsp;i&nbsp;Zwiększania Odporności.
+                    </p>
+                </div>
+            </div>
         </footer>
 
         <script> // scroll
@@ -304,6 +321,15 @@
                 if (el) {
                     el.classList.add("unwrapped-content");
                     el.classList.remove("wrapped-content");
+                }
+            }
+        </script>
+        <script> //wrapp div
+            function wrappDiv(divId) {
+                const el = document.getElementById(divId);
+                if (el) {
+                    el.classList.add("wrapped-content");
+                    el.classList.remove("unwrapped-content");
                 }
             }
         </script>
